@@ -1,0 +1,5 @@
+{
+  "hook_url": "https://oapi.dingtalk.com/robot/send?access_token=xxxx",
+  "keyword": "Test",
+  "appsecret": ""
+}
