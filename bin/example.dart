@@ -20,7 +20,10 @@ Future<void> main(List<String> args) async {
     keyword: keyword,
     appsecret: appsecret,
   );
-  await sender.sendText('1');
+
+  final at = At(isAtAll: true);
+
+  await sender.sendText('1', at: at);
 
   final markdown = '''
 标题
@@ -52,5 +55,7 @@ Future<void> main(List<String> args) async {
 1. item1
 2. item2
   ''';
-  await sender.sendMarkdown(markdown);
+
+  final at2 = At(userIds: ['manager5664']);
+  await sender.sendMarkdown(markdown, at: at2);
 }

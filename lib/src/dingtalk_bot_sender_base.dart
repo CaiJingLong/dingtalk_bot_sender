@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 
+import 'at.dart';
+
 /// 主类
 class DingTalkSender {
   /// webhook url
@@ -37,13 +39,14 @@ class DingTalkSender {
     return Uri.parse('$hookUrl${_sign()}');
   }
 
-  Future<void> sendMarkdown(String markdownText) async {
+  Future<void> sendMarkdown(String markdownText, {At? at}) async {
     final bodyMap = {
       'msgtype': 'markdown',
       'markdown': {
         'title': keyword,
         'text': markdownText,
       },
+      'at': at?.toMap() ?? {},
     };
 
     await http.post(
@@ -56,12 +59,13 @@ class DingTalkSender {
     );
   }
 
-  Future<void> sendText(String text) async {
+  Future<void> sendText(String text, {At? at}) async {
     final bodyMap = {
       'msgtype': 'text',
       'text': {
         'content': '$keyword $text',
       },
+      'at': at?.toMap() ?? {},
     };
 
     final response = await http.post(
