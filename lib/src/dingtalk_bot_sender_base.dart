@@ -9,6 +9,8 @@ import 'single_action.dart';
 
 /// 发送的主类, 主要目的就是可以使用钉钉的机器人发送消息到群里
 ///
+/// 关于配置机器人可以查看[文档](https://developers.dingtalk.com/document/app/custom-robot-access)
+///
 /// 关于消息类型可以查看[文档](https://developers.dingtalk.com/document/app/custom-robot-access/title-72m-8ag-pqw)
 ///
 /// 使用示例如下
