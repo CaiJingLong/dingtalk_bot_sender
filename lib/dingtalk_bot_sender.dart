@@ -1,4 +1,4 @@
-/// Support
+/// 钉钉机器人的发送库
 library dingtalk_bot_sender;
 
 export 'src/dingtalk_bot_sender_base.dart';
