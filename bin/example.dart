@@ -36,7 +36,7 @@ Future<void> main(List<String> args) async {
 Future<void> sendFeedCard(DingTalkSender sender) async {
   await sender.sendFeedCard(actions: [
     FeedAction(
-      title: '$keyword pub.dev',
+      title: 'pub.dev',
       messageURL: 'https://pub.dev',
       picURL:
           'https://pub.flutter-io.cn/static/img/landing-01.png?hash=9uo48icpilbgptbl952ljslbcpbo0bh4',

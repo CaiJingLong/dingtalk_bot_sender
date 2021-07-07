@@ -124,7 +124,11 @@ class DingTalkSender {
       encoding: utf8,
     );
 
-    print(response.body);
+    final body = response.body;
+    final map = json.decode(body);
+    if (map['errcode'] != 0) {
+      print(body);
+    }
   }
 
   /// 发送纯文本
