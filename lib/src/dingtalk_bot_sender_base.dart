@@ -73,11 +73,15 @@ class DingTalkSender {
   /// 加签, 有需求就传入
   final String? appsecret;
 
+  /// 发送失败时, 是否 throw 错误信息, 默认不发送
+  final bool throwErrorOnSendFail;
+
   /// [hookUrl] 是必须的, 其他都不是必须的, 但需要跟着
-  DingTalkSender({
+  const DingTalkSender({
     required this.hookUrl,
     this.keywords = const [],
     this.appsecret,
+    this.throwErrorOnSendFail = false,
   });
 
   String _sign() {
@@ -124,10 +128,14 @@ class DingTalkSender {
       encoding: utf8,
     );
 
+    if (!throwErrorOnSendFail) {
+      return;
+    }
+
     final body = response.body;
     final map = json.decode(body);
     if (map['errcode'] != 0) {
-      print(body);
+      throw response;
     }
   }
 
