@@ -1,6 +1,6 @@
 # 使用钉钉的机器人 API 发送消息
 
-官方文档: https://developers.dingtalk.com/document/app/custom-robot-access
+[官方文档][]
 
 ## 使用说明
 
@@ -48,3 +48,5 @@ final sender = DingTalkSender(
 ## LICENSE
 
 Apache 2.0
+
+[官方文档]: https://developers.dingtalk.com/document/app/custom-robot-access
