@@ -2,10 +2,9 @@ name: dingtalk_bot_sender
 description: The library send message of dingtalk bot with webhook url.
 version: 1.2.0
 homepage: https://github.com/CaiJingLong/dingtalk_bot_sender.git
-publish_to: https://pub.dev
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.12.0 <4.0.0"
 
 dev_dependencies:
   lints: ^3.0.0
