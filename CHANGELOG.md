@@ -1,9 +1,14 @@
 # CHANGELOG
 
 - [CHANGELOG](#changelog)
+  - [1.2.0](#120)
   - [1.1.1](#111)
   - [1.1.0](#110)
   - [1.0.0](#100)
+
+## 1.2.0
+
+- Bump dependencies version.
 
 ## 1.1.1
 
